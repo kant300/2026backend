@@ -75,3 +75,11 @@
     5) 코딩시 명령어를 해석하면서 작성 
 
 Gap(좌우 상하여백) : HTML에서 Margin(바깥여백), Padding(안쪽여백)
+
+윈도우     java        SpringBoot
+이벤트     이벤트리스터   Service
+
+SpringBoot
+디자인(UI/UX) <--------->주소연결<--------->작업처리<--------->데이터베이스(자료를 반영구저장)
+HTML                    Controller       Service         Repository
+            변수DTO                               Entity
