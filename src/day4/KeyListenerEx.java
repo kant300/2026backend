@@ -8,7 +8,7 @@
 //10진수 : 인간이 사용하는 단위
 //진법 : 진수와 진수로 변환 2진수->8진수, 16진수, 10진수
 //
-
+ /*
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyAdapter;
@@ -50,7 +50,9 @@ public class KeyListenerEx extends JFrame {
             }else if(e.getKeyChar() ==KeyEvent.VK_F1){
                 contentPane.setBackground(Color.GREEN);//
             }*/
-            if(e.getKeyCode() ==53){//눌러진키가 %이면
+/*
+import java.awt.Color;
+import java.awt.event.KeyEvent;if(e.getKeyCode() ==53){//눌러진키가 %이면
                 contentPane.setBackground(Color.YELLOW);//작업지 배경색 변경
             }else if(e.getKeyCode() ==KeyEvent.VK_F1){
                 contentPane.setBackground(Color.GREEN);//
@@ -63,3 +65,4 @@ public class KeyListenerEx extends JFrame {
         new KeyListenerEx();
     }
 }
+*/
