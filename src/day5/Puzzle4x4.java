@@ -1,5 +1,10 @@
 package day5;
 
+//java(사용자가 작성한 프로그램)
+//    | 빌드(기계어 파일로 만드는 작업)
+//class(기계어로 번역된 프로그램, 라이브러리)
+//jar(기계어로 번역된 프로그램, 실행파일)-배포
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -12,14 +17,23 @@ public class Puzzle4x4 extends JFrame implements ActionListener {
 //    private JButton[][] buttons = new JButton[SIZE][SIZE]; //4x4배열
 //    private int emptyRow= SIZE-1, emptyCol= SIZE-1; //빈공백이 있는 버튼의 위치
 
-    private JButton[][] buttons = new JButton[4][4]; //4x4배열
+    private JButton[][] buttons ; //4x4배열
     private int emptyRow=3, emptyCol=3; //빈공백이 있는 버튼의 위치
-    private final int SIZE=4;
+    private int SIZE=4;//게임의 크기
     //생성자(윈도우)
-    public Puzzle4x4(){
-        setTitle("퍼즐게임");
+    public Puzzle4x4(int size){
+        //퍼즐의 갯수 변경
+        SIZE = size;
+        //빈공백의 위치를 변경
+        emptyRow = size-1;
+        emptyCol = size-1;
+
+        buttons = new JButton[SIZE][SIZE];
+
+        setTitle(size+"x"+size+"퍼즐게임");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(400,400);
+
+        setSize(SIZE*100,SIZE*100);
         //레이아웃
         setLayout(new GridLayout(SIZE,SIZE));//4x4행렬로 레이아웃
         initPuzzle();//퍼즐초기화
@@ -182,6 +196,23 @@ public class Puzzle4x4 extends JFrame implements ActionListener {
     }
 
     public static void main(String[] args) {
-        new Puzzle4x4();//게임시작
+        String[] options= {"3x3","4x4","5x5"};
+        //선택대화상자를 만든다.
+        //독립적인 메시지창(null-부모없음)
+        //내용(난이도),창제목,
+        // 옵션형태, 메시지형태, 아이콘, 옵션, 초기선택값
+        int choice = JOptionPane.showOptionDialog(null,
+                "난이도를 선택하세요", "Puzzle Game",
+                JOptionPane.DEFAULT_OPTION,
+                JOptionPane.INFORMATION_MESSAGE,
+                null, options, options[1]);
+
+        int size =4; //기본(4x4)
+        if(choice==0){
+            size=3; //(3x3)
+        } else if (choice==2) {
+            size=5;//(5x5)
+        }
+        new Puzzle4x4(size);//게임시작
     }
 }
