@@ -20,6 +20,11 @@ public class Puzzle4x4 extends JFrame implements ActionListener {
     private JButton[][] buttons ; //4x4배열
     private int emptyRow=3, emptyCol=3; //빈공백이 있는 버튼의 위치
     private int SIZE=4;//게임의 크기
+    JPanel puzzlePanel = new JPanel();
+
+    JLabel infoLabel;//생성자 만들기, 이벤트에서 카운터 증가
+    private int moveCount=0;
+
     //생성자(윈도우)
     public Puzzle4x4(int size){
         //퍼즐의 갯수 변경
@@ -32,11 +37,22 @@ public class Puzzle4x4 extends JFrame implements ActionListener {
 
         setTitle(size+"x"+size+"퍼즐게임");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        //레이아웃(점수판과 게임판)-패널
+        setLayout(new BorderLayout());
+
+        puzzlePanel.setLayout(new GridLayout(SIZE,SIZE));
+        initPuzzle();//퍼즐초기화
+        add(puzzlePanel, BorderLayout.CENTER); //퍼즐을 가운데 배치
+
+        //게임정보에 사용할 배치 -패널
+        infoLabel = new JLabel("이동수 : 0");
+        infoLabel.setFont(new Font("맑은 고딕",Font.BOLD, 16));
+        infoLabel.setHorizontalAlignment(SwingConstants.CENTER);//중앙정렬
+        add(infoLabel, BorderLayout.NORTH);
 
         setSize(SIZE*100,SIZE*100);
-        //레이아웃
-        setLayout(new GridLayout(SIZE,SIZE));//4x4행렬로 레이아웃
-        initPuzzle();//퍼즐초기화
+
+
         shuffle();
 
 
@@ -68,7 +84,7 @@ public class Puzzle4x4 extends JFrame implements ActionListener {
                     buttons[i][j].setText(String.valueOf(num++));//Integer.toString()
 
                 }
-                add(buttons[i][j]);//윈도우에 버튼을 배치
+                puzzlePanel.add(buttons[i][j]);//윈도우에 패널에 추가버튼을 배치
 
 
             }
@@ -133,6 +149,10 @@ public class Puzzle4x4 extends JFrame implements ActionListener {
                         swap(emptyRow,emptyCol, i, j);//숫자교환
                         emptyRow=i;
                         emptyCol=j;
+
+                        // 이동갯수 증가
+                        moveCount++;
+                        infoLabel.setText("이동수 : "+moveCount);
 
                         //완성체크
                         if(isSolved()){//퍼즐이 완성되면
