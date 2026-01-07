@@ -178,7 +178,7 @@ public class Puzzle4x4 extends JFrame implements ActionListener {
                 }
             }
         }
-        return false;
+        return true;
     }
 
     public static void main(String[] args) {
