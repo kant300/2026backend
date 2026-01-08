@@ -1,4 +1,4 @@
-package Chapter3;
+package JavaBeginner.Chapter3;
 
 //printf의 활용
 public class Ex03_05 {

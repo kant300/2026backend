@@ -1,4 +1,4 @@
-package Chapter3;
+package JavaBeginner.Chapter3;
 
 //변수 선언과 변수에 값을 대입(=,저장)-왼쪽내용을 오른쪽 전달
 public class Ex03_07 {

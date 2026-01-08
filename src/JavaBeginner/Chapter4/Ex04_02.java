@@ -1,4 +1,4 @@
-package Chapter4;
+package JavaBeginner.Chapter4;
 
 //연산순위
 public class Ex04_02 {

@@ -1,4 +1,4 @@
-package Chapter3;
+package JavaBeginner.Chapter3;
 
 //문자열 처리
 //"" 안에 작성, String 래퍼클래스를 사용===>존재하지 않는 데이터타입

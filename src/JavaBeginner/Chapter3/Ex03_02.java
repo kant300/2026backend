@@ -1,4 +1,4 @@
-package Chapter3;
+package JavaBeginner.Chapter3;
 
 //예문) 형식과 전달하는 값의 개수가 틀린경우
 public class Ex03_02 {

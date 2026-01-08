@@ -1,4 +1,4 @@
-package Chapter3;
+package JavaBeginner.Chapter3;
 
 //문자출력-ASCII코드에 문자표를 사용한다. A-65
 public class Ex03_12 {

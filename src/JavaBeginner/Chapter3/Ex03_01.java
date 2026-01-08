@@ -1,4 +1,4 @@
-package Chapter3; //클래스가 포함되어 있는 폴더(패키지)
+package JavaBeginner.Chapter3; //클래스가 포함되어 있는 폴더(패키지)
 
 //연습) printf()의 기본 사용법(형식이 있는 모양으로 출력)
 //print(인쇄)+format(형식) 결합

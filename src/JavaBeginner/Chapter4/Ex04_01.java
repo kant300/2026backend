@@ -1,4 +1,4 @@
-package Chapter4;
+package JavaBeginner.Chapter4;
 
 //산술연산자 사용
 public class Ex04_01 {

@@ -1,4 +1,4 @@
-package Chapter3;
+package JavaBeginner.Chapter3;
 
 //printf에서 특수문자 활용
 public class Ex03_06 {
