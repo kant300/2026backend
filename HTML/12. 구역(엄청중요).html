@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+      .row { /*클래스명 row를 사용할 때 효과를 적용*/
+        dispaly: flex;
+        border: 1px solid black;
+      }
+      .col { /*클래스명 col을 사용할 때 효과를 적용*/
+        flex: 1;
+        border : 1px solid black;
+        padding : 10px;
+        text-align: center;
+      }
+    </style>
+</head>
+<body>
+<pre>
+  특정 영역을 나누어서 처리하는 경우, 요새 모든 웹페이지 구성
+  1. 같은 행에서 영역을 나눌 때 : span
+  2. 행과 행, 열과 열을 나눌 때 : div  --- 반드시 알아야 하는 테그
+
+  홈페이지 소스를 보면 전체 내용의 90% div로 구현
+</pre>
+<p>문장에서 특정 부분을 영역으로 지정을 합니다. <span  style="border:1px solid">영역</span></p>
+
+<div style="border:1px solid">
+  <p>신상품 목록</p>
+</div>
+<div  style="border:1px solid">
+  추천상품 목록
+</div>
+<div  style="border:1px solid">
+  할인상품 목록
+</div>
+<div clsss="row">
+  <div class="col">첫번째칸</div>
+  <div class="col">두번째칸</div>
+  <div class="col">세번째칸</div>
+</div>
+</body>
+</html>

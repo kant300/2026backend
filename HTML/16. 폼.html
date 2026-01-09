@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<pre>
+    입력 및 출력 디자인 작업시 필요합니다.
+    Scanner 또는 print 역할
+    Form : 전달하거나 전달받은 값을 처리할 영역
+      action : 폼에 내용을 전달할 주소
+
+    폼을 구성 : input태그와 button태그를 사용
+    input 태그의 type
+         type="text" : 문자열을 입력받는다.
+         type="number" : 숫자를 입력받는다.
+         type="date" : 날짜를 입력받는다.
+         type="datetime" : 날짜와 시간을 입력받는다.
+         type="radio" : 옵션단추(O)-하나의 항목만 선택가능
+         type="checkbox" : 선택버튼(ㅁ)-여러 항목을 선택가능
+         type="email" : 이메일주소를 입력받는다.
+         type="tel" : 전화번호를 입력받는다.
+         type="reset" : form안에 있는 모든 input의 내용을 초기화
+         type="submit" : form안에 있는 모든 input의 값을 서버에 전달
+         type="file" : 파일을 입력받는다.(카메라)
+         type="password" : 비밀번호를 입력받는다.
+         name="변수명" : 태그에 변수명을 지정한다.
+         value="값" : name에 초기값 지정할 때
+         placeholder="메세지" : 안내문구를 출력
+
+    label태그 : input태그의 제목
+
+    textarea : 다중 문장을 입력때
+        Rows :행의 수, Cols :열의 문자수
+</pre>
+<pre>
+    홈페이지는 각 페이지마다 기존 4가지 기능을 구현
+    삽입 : form에 내용을 입력해서 서버에 전달해서 저장
+    수정 : 서버에서 내용을 받아서 form 출력하고, 수정한 내용을 서버에 전달해서 수정
+    삭제 : 버튼을 클릭해서 삭제할 대상을 서버에 전달해서 삭제
+    조회 : 서버에서 내용을 받아서 table에 내용을 출력
+
+    삽입디자인(입력)(**)-조회디자인(출력)(**)-삭제버튼(*)-수정디자인(수정)(***)
+
+    주제에 맞게 CSS 구성-모든 태그에 효과 미리 작성(프론트)
+    HTML에 CSS를 적용해서 원하는 디자인 구현
+    Google에서 표준 CSS 무료 제공 - BootStrap3, BootStrap4, BootStrap5
+
+    부트스트랩은 웹디자인에 필요한 CSS와 javascript를 구글에 만들어서 표준으로 제공하는 자료
+    기존 html에 태그에 class에 각 효과를 적용하면 화면을 쉽게 디자인하도록 사용
+    템플릿은 기존의 부트스트랩을 주제에 맞게 변형해서 제공하는 틀
+
+    부트스트랩을 이용한 디자인 작업, 웹개발한 필요한 용어
+</pre>
+<form action="" method="get">
+    <p>action은 submit을 클릭했을 때 이동할 서버 주소</p>
+    <p>method는 서버에 값을 전달하는 방식(get,post)</p>
+    <p>get방식은 주소뒤에 ? 변수=값&변수=값으로 전달 128byte</p>
+    <p>post방식은 패킷으로 전달되어서 주소에 표시가 안된다.(보안이 필요, 파일전송)</p>
+    <label>이름 :</label>
+    <input type="text" name="userName" value="홍길동"><br>
+    <label>비밀번호 :</label>
+    <input type="password" name="password"><br>
+    <label>전화번호 :</label>
+    <input type="tel" name="phone" placeholder="전화번호를 입력하세요."><br>
+    <textarea name="comment" rows="5" cols="50" placeholder="가입인사를 입력하세요."></textarea><br>
+    <button type="reset">초기화</button><button type="submit">회원가입</button>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+      /*아이디명은 #으로 시작*/
+      #myHeader {
+        background-color: lightblue; /*배경색*/
+        color: black;  /*전경색*/
+        padding: 40px; /*안쪽여백*/
+        text-align: center; /*문자열의 정렬방식*/
+      }
+      .myHeader {
+        background-color: lightblue; /*배경색*/
+        color: black;  /*전경색*/
+        padding: 40px; /*안쪽여백*/
+        text-align: center; /*문자열의 정렬방식*/
+      }
+    </style>
+</head>
+<body>
+<pre>
+    아이디는 페이지당 1번만 선언이 가능하다.(고유의 이름)
+    중복사용이 불가능
+
+    클래스 : .이름선언   class="사용할 클래스명"  여러태그에 반복사용이 가능
+    아이디 : #이름선언   id="사용할 아이디명"     페이지에 한번만 사용이 가능
+
+     HTML에서 오류는 문서에서는 별의미가 없다.
+               |-java나 javascript에서 사용할 때 문제발생
+</pre>
+<h1 id="myHeader">아이디로 효과를 적용시킨 태그</h1>
+<h1 id="myHeader">아이디가 중복사용시 오류가 발생됩니다.</h1>
+<h1 class="myHeader" >여러 태그에 중복사용이 필요하면</h1>
+<h1 class="myHeader" >아이디로 효과를 적용시킨 태그</h1>
+</body>
+</html>

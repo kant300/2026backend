@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<pre>
+    목록페이지 구현시 기본 사용하는 태그
+     열(칸) 열(칸)열(칸)
+    |-----|-----|-----|
+    |     |     |     | 행
+    |-----|-----|-----|
+    |     |     |     | 행
+    |-----|-----|-----|
+    행과 열로 구성되어 있다.
+    table ---테이블 시작
+       tr -- 일반행
+          ht - 제목열
+          td---칸(열)
+
+    속성 : 테두리선, 칸색상, 테이블(칸)크기, 여백지정
+
+    td의 갯수는 똑같이 지정
+</pre>
+
+<h1>게시판</h1>
+<table style="border:1px solid"> <!--테이블의 영역-->
+    <tr style="border:1px solid"> <!--제목행-->
+        <th style="border:1px solid">첫번째제목</th>
+        <th style="border:1px solid">두번째제목</th>
+        <th style="border:1px solid">세번째제목</th>
+    </tr>
+    <tr style="border:1px solid">
+        <td style="border:1px solid">첫번째내용</td>
+        <td style="border:1px solid">두번째내용</td>
+        <td style="border:1px solid">세번째내용</td>
+    </tr>
+    <tr style="border:1px solid">
+        <td style="border:1px solid">첫번째내용</td>
+        <td style="border:1px solid">두번째내용</td>
+        <td style="border:1px solid">세번째내용</td>
+    </tr>
+</table>
+
+</body>
+</html>
